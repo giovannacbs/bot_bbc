@@ -21,33 +21,33 @@ def enviar_mensagem(chat_id, texto):
 def brasil():
     tema = 'cz74k717pw5t'  
     noticias = exibir_top5(tema)
-    resposta = "Últimas notícias sobre o Brasil:\n"
+    resposta = "Últimas notícias sobre o Brasil:\n\n"
     for titulo, link in noticias:
-        resposta += f"{titulo}\nLink: https://www.bbc.com{link}\n\n"
+        resposta += f"{titulo}\nLink: {link}\n\n"
     return resposta
 
 def internacional():
     tema = 'cmdm4ynm24kt'  
     noticias = exibir_top5(tema)
-    resposta = "Últimas notícias internacionais:\n"
+    resposta = "Últimas notícias internacionais:\n\n"
     for titulo, link in noticias:
-        resposta += f"{titulo}\nLink: https://www.bbc.com{link}\n\n"
+        resposta += f"{titulo}\nLink: {link}\n\n"
     return resposta
 
 def tecnologia():
     tema = 'c404v027pd4t'  
     noticias = exibir_top5(tema)
-    resposta = "Últimas notícias sobre tecnologia:\n"
+    resposta = "Últimas notícias sobre tecnologia:\n\n"
     for titulo, link in noticias:
-        resposta += f"{titulo}\nLink: https://www.bbc.com{link}\n\n"
+        resposta += f"{titulo}\nLink: {link}\n\n"
     return resposta
 
 def economia():
     tema = 'cmdm4ynm24kt'  
     noticias = exibir_top5(tema)
-    resposta = "Últimas notícias de Economia:\n"
+    resposta = "Últimas notícias de Economia:\n\n"
     for titulo, link in noticias:
-        resposta += f"{titulo}\nLink: https://www.bbc.com{link}\n\n"
+        resposta += f"{titulo}\nLink: {link}\n\n"
     return resposta
 
 
