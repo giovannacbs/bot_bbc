@@ -11,9 +11,9 @@ url = f"https://api.telegram.org/bot{token}/"
 
 # Criando função que vai responder o usuário
 def enviar_mensagem(chat_id, texto):
-    url = url + "sendMessage"
+    url_mensagem = url + "sendMessage"
     data = {"chat_id": chat_id, "text": texto}
-    requests.post(url, json=data)
+    requests.post(url_mensagem, json=data)
 
 # Definindo as saídas de acordo com a escolha do usuário
 def brasil():
