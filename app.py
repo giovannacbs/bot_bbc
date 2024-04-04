@@ -29,7 +29,7 @@ def economia():
     return "Você escolheu a opção 4"
 
 # Criando a rota para manter o bot funcionando e criando menu com as opções
-@app.route('/mensagem', methods=['POST'])
+@app.route('/telegram', methods=['POST'])
 def mensagem():
     mensagem = request.json
     chat_id = mensagem['message']['chat']['id']
