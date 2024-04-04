@@ -59,7 +59,7 @@ def mensagem():
     texto = mensagem['message']['text']
     
     if texto == '/start':
-        resposta = "Escolha uma opção e responda com o número selecionado:\n1. Brasil\n2. Internacional\n3. Política\n4. Economia"
+        resposta = "Escolha uma opção e responda com o número selecionado:\n1. Brasil\n2. Internacional\n3. Política\n4. Tecnologia"
     elif texto == '1':
         resposta = brasil()
     elif texto == '2':
