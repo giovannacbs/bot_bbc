@@ -73,7 +73,7 @@ def mensagem():
     elif texto == '4':
         resposta = economia()
     else:
-        resposta = "Opção inválida. Por favor, escolha um dos quatro temas."
+        resposta = "Opção inválida. Por favor, escolha um dos quatro temas ou digite '/start' para voltar ao menu inicial."
 
     enviar_mensagem(chat_id, resposta)
     return "OK", 200
