@@ -54,6 +54,32 @@ def economia():
     resposta = "Digite '/start' para voltar ao menu inicial."        
     return resposta
 
+# Puxando as últimas 5 notícias do site BBC em português
+def exibir_top5(tema):
+  url = 'https://www.bbc.com/portuguese/topics/' + tema
+
+  response = requests.get(url)
+  soup = BeautifulSoup(response.text, 'html.parser')
+
+  h2 = soup.find_all('h2') # look for all titles 
+  titulos = []
+  for h in h2:
+    titulo = h.get_text()
+    titulos.append(titulo)
+
+  titulos = titulos[:5] # select only first 5
+  
+  links = soup.find_all('a', {'class' : 'focusIndicatorDisplayBlock bbc-uk8dsi e1d658bg0'})
+  
+  hrefs = []
+  for href in links:
+    hrefs.append(href.get('href'))
+
+  hrefs = hrefs[:5]
+
+  materias = list(zip(titulos, hrefs))
+
+  return materias
 
 # Criando a rota para manter o bot funcionando e criando menu com as opções
 @app.route('/mensagem', methods=['POST'])
@@ -80,29 +106,3 @@ def mensagem():
 
 if __name__ == '__main__':
     app.run(threaded=True)
-
-def exibir_top5(tema):
-  url = 'https://www.bbc.com/portuguese/topics/' + tema
-
-  response = requests.get(url)
-  soup = BeautifulSoup(response.text, 'html.parser')
-
-  h2 = soup.find_all('h2') # look for all titles 
-  titulos = []
-  for h in h2:
-    titulo = h.get_text()
-    titulos.append(titulo)
-
-  titulos = titulos[:5] # select only first 5
-  
-  links = soup.find_all('a', {'class' : 'focusIndicatorDisplayBlock bbc-uk8dsi e1d658bg0'})
-  
-  hrefs = []
-  for href in links:
-    hrefs.append(href.get('href'))
-
-  hrefs = hrefs[:5]
-
-  materias = list(zip(titulos, hrefs))
-
-  return materias
