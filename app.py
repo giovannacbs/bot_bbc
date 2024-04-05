@@ -21,7 +21,7 @@ def enviar_mensagem(chat_id, texto):
 def brasil():
     tema = 'cz74k717pw5t'  
     noticias = exibir_top5(tema)
-    resposta = "Últimas notícias sobre o Brasil:\n\n"
+    resposta = "Últimas 5 notícias sobre o Brasil disponíveis no site da BBC em português:\n\n"
     for titulo, link in noticias:
         resposta += f"{titulo}\nLink: {link}\n\n"
     return resposta
@@ -29,7 +29,7 @@ def brasil():
 def internacional():
     tema = 'cmdm4ynm24kt'  
     noticias = exibir_top5(tema)
-    resposta = "Últimas notícias internacionais:\n\n"
+    resposta = "Últimas 5 notícias internacionais disponíveis no site da BBC em português:\n\n"
     for titulo, link in noticias:
         resposta += f"{titulo}\nLink: {link}\n\n"
     return resposta
@@ -37,7 +37,7 @@ def internacional():
 def tecnologia():
     tema = 'c404v027pd4t'  
     noticias = exibir_top5(tema)
-    resposta = "Últimas notícias sobre tecnologia:\n\n"
+    resposta = "Últimas 5 notícias sobre tecnologia disponíveis no site da BBC em português:\n\n"
     for titulo, link in noticias:
         resposta += f"{titulo}\nLink: {link}\n\n"
     return resposta
@@ -45,7 +45,7 @@ def tecnologia():
 def economia():
     tema = 'cmdm4ynm24kt'  
     noticias = exibir_top5(tema)
-    resposta = "Últimas notícias de Economia:\n\n"
+    resposta = "Últimas 5 notícias de economia disponíveis no site da BBC em português:\n\n"
     for titulo, link in noticias:
         resposta += f"{titulo}\nLink: {link}\n\n"
     return resposta
