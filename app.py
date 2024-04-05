@@ -24,6 +24,7 @@ def brasil():
     resposta = "Últimas 5 notícias sobre o Brasil disponíveis no site da BBC em português:\n\n"
     for titulo, link in noticias:
         resposta += f"{titulo}\n{link}\n\n"
+    resposta = "Digite '/start' para voltar ao menu inicial."    
     return resposta
 
 def internacional():
@@ -32,6 +33,7 @@ def internacional():
     resposta = "Últimas 5 notícias internacionais disponíveis no site da BBC em português:\n\n"
     for titulo, link in noticias:
         resposta += f"{titulo}\n{link}\n\n"
+    resposta = "Digite '/start' para voltar ao menu inicial."    
     return resposta
 
 def tecnologia():
@@ -40,6 +42,7 @@ def tecnologia():
     resposta = "Últimas 5 notícias sobre tecnologia disponíveis no site da BBC em português:\n\n"
     for titulo, link in noticias:
         resposta += f"{titulo}\n{link}\n\n"
+    resposta = "Digite '/start' para voltar ao menu inicial."    
     return resposta
 
 def economia():
@@ -48,6 +51,7 @@ def economia():
     resposta = "Últimas 5 notícias de economia disponíveis no site da BBC em português:\n\n"
     for titulo, link in noticias:
         resposta += f"{titulo}\n{link}\n\n"
+    resposta = "Digite '/start' para voltar ao menu inicial."        
     return resposta
 
 
